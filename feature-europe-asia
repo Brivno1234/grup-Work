@@ -1,16 +1,34 @@
-class MurderStatsManager(self, continent, country, city, count):
+class MurderStatsManager:
     def __init__(self):
-        self.data = {}
-        
+        self.data = {
+            "Europe": {
+                "Estonia": {
+                    "Tallinn": 5
+                },
+                "Finland": {
+                    "Helsinki": 3
+                }
+            },
+            "Asia": {
+                "Japan": {
+                    "Tokyo": 8
+                }
+            }
+        }
+
     def add_data(self, continent, country, city, count):
         if continent not in self.data:
             self.data[continent] = {}
         if country not in self.data[continent]:
             self.data[continent][country] = {}
         self.data[continent][country][city] = count
-        
 
+    def get_stats(self):
+        return self.data
 
-Europe → Estonia → Tallinn (5)
-Europe → Finland → Helsinki (3)
-Asia → Japan → Tokyo (8)
+    def get_city_stats(self, continent, country, city):
+        return self.data.get(continent).get(country).get(city)
+
+   
+            
+
