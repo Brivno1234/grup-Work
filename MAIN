@@ -27,7 +27,7 @@ class MurderStatsManager:
         return self.data
 
     def get_city_stats(self, continent, country, city):
-        return self.data.get(continent).get(country).get(city, None)
+        return self.data.get(continent).get(country).get(city)
 
     def remove_city(self, continent, country, city):
         try:
@@ -49,8 +49,8 @@ tokyo_stats = stats.get_city_stats("Asia", "Japan", "Tokyo")
 print(" Tokyo:", tokyo_stats)
 
 stats.remove_city("Europe", "Estonia", "Tallinn", )
-print(" remove Tallinn:")
+print(" \nremove Tallinn:")
 print(stats.get_stats())
 
-print(" проверка:")
+print(" \nпроверка:")
 print(stats.get_stats())
