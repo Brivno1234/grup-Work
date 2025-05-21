@@ -1,4 +1,4 @@
-class Mur(self,ontinent, country, city, count)
+class MurderStatsManager(self,ontinent, country, city, count)
     def __init__(self)
         self.date = {}
         
