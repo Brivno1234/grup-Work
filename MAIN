@@ -1,6 +1,6 @@
-class Mur(self,ontinent, country, city, count)
-    def __init__(self)
-        self.date = {}
+class Mur(self,ontinent, country, city, count):
+    def __init__(self):
+        self.data = {}
         
     def add_data(self, continent, country, city, count):
         if continent not in self.data:
@@ -11,11 +11,13 @@ class Mur(self,ontinent, country, city, count)
     
 
     def get_stats(self):
-        return self.date
+        return self.data
         
-    def get_city_stats(self,continent, country, city)
-        return self.date.get(continent,{}).get(country).get(city)
+    def get_city_stats(self,continent, country, city):
+        return self.data.get(continent,{}).get(country).get(city)
     
-    def remove_city(self,continent, country, city)
-        if city in date
-            date.remove.(self.city)
+    def remove_city(self,continent, country, city):
+        try:
+            del self.data[continent][country][city]
+            if not self.data[continent][country]:
+                del self.data[continent][country]
