@@ -1,16 +1,21 @@
-class MurderStatsManager(self,ontinent, country, city, count)
+class Mur(self,ontinent, country, city, count)
     def __init__(self)
         self.date = {}
         
         def add_data(self, continent, country, city, count):
+        
         if continent not in self.data:
             self.data[continent] = {}
-        if
-      
+        if country not in self.data[continent]:
+            self.data[continent][country] = {}
+        self.data[continent][country][city] = count
     
 
     def get_stats(self):
+        pass
         
     def get_city_stats(self.continent, country, city)
+        pass
     
     def remove_city(self.continent, country, city)
+        pass
