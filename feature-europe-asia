@@ -1,5 +1,5 @@
-class MurderStatsManager:
-    def __init__(self, continent, country, city, count):
+class MurderStatsManager(self, continent, country, city, count):
+    def __init__(self):
         self.data = {}
         
     def add_data(self, continent, country, city, count):
