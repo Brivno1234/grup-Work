@@ -40,4 +40,17 @@ class MurderStatsManager:
             print("Город не найден.")
 
 
+stats = MurderStatsManager()
 
+print("все города:")
+print(stats.get_stats())
+
+tokyo_stats = stats.get_city_stats("Asia", "Japan", "Tokyo")
+print(" Tokyo:", tokyo_stats)
+
+stats.remove_city("Europe", "Estonia", "Tallinn", )
+print(" \nremove Tallinn:")
+print(stats.get_stats())
+
+print(" \nпроверка:")
+print(stats.get_stats())
